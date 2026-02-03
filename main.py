@@ -129,7 +129,7 @@ class TailscaleExtension(Extension):
         ] + [
             ExtensionResultItem(
                 icon="images/tailscale.png",
-                name=f"{node["hostname"]}{"" if node["online"] else " (offline)"}",
+                name=f"{node['hostname']}{'' if node['online'] else ' (offline)'}",
                 description=node["ipv4"],
                 on_enter=CopyToClipboardAction(node["ipv4"]),
                 keyword=node["hostname"],
